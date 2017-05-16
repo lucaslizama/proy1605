@@ -1,7 +1,7 @@
 <?php
     include "lib/Usuario.php";
 
-    $user = new Usuario(0,"flopez","1234");
+    $user = new Usuario(0,$_GET["user"],$_GET["pass"]);
 
     if($user->VerificaUsuario()) 
         echo "Usuario Existe";
