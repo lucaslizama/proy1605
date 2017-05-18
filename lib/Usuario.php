@@ -3,7 +3,7 @@
 
     class Usuario {
         private $idusuario;
-        private $nombre;
+        public $nombre;
         private $clave;
 
         public function __construct($id,$nombre,$clave) {
@@ -24,11 +24,6 @@
 
             return $resultado->num_rows >= 1;
 
-            /*
-            foreach($resultado->fetch_assoc() as $fila => $valor) {
-                echo "$fila: $valor <br>";
-            }
-            */
             $conexion->close();
             $resultado->close();
         }
